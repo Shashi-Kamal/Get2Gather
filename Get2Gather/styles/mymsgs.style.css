@@ -1,0 +1,340 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #fff9c4;
+	font-family: "Lato", sans-serif;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 4;
+}
+
+.navone {
+	background-image: linear-gradient(#212121, #484848, #212121);
+	list-style: none;
+	text-align: center;
+	padding: 15px 0px;
+	position: relative;
+	/*top: 240px;*/
+	z-index: 1;
+}
+
+.navone li {
+	display: inline-block;
+	padding: 0 30px;
+} 
+
+.navone li a {
+	text-decoration: none;
+	color: white;
+}
+
+.navone li a:hover {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+/*highlighting the active page*/
+.active {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+/*==============Design for the Search area==================*/
+
+input[type = submit] {
+	padding: 12px 20px;
+	font-weight: bold;
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	border-radius: 4px;
+	border-width: 0px;
+	cursor: pointer;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+input[type = submit]:hover {
+	font-weight: bolder;
+	color: white;
+}
+
+
+
+
+/*==============Design for the Results area==================*/
+
+.small_pic img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+
+.display {
+	margin: auto;
+	margin-top: 40px;
+	padding: 0px;
+	background-color: transparent;
+	width: 800px;
+	height: 500px;
+	overflow: auto;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.display table, th, td{
+	border-collapse: collapse;
+	border: 0px solid black;
+}
+
+.display td {
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+.display th {
+    background-image: linear-gradient(#312c32, #daad86, #312c32);
+    padding: 10px;
+	text-align: center;
+	color: white;
+}
+
+.display table tr:nth-child(even) {
+	/*background-color: #98503c;
+	/*background-image: linear-gradient(#212121, #484848, #212121);
+    /*background-color: #212121;*/
+}
+
+.display table tr:nth-child(odd) {
+	/*background-color: #7e2e1f;
+	/*background-image: linear-gradient(#484848, #212121, #484848);
+   	/*background-color: #484848;*/
+}
+
+button {
+	padding: 12px 20px;
+	font-weight: bold;
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	border-radius: 4px;
+	border-width: 0px;
+	cursor: pointer;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+button:hover {
+	font-weight: bolder;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: white;;
+	cursor: pointer;
+}
+
+/*===================================== Message Modal Box ======================================*/
+.message {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    padding-top: 200px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.message-content {
+    margin: auto;
+    padding: 15px;
+    border: 0px solid #888;
+    width: 25%;
+    height: 130px;
+    background-image: linear-gradient(#212121,#484848, #212121);
+	border-radius: 0 50px 0 50px;
+	color: white;
+}
+
+.message-content input[type=submit] {
+	margin-top: 10px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    margin-top: -65px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.msg {
+	background-color: transparent;
+}
+
+.form {
+	padding-left: 85px;
+	padding-top: 15px;
+}
+/*=============================New thing=========================*/
+
+.window {
+	margin: auto;
+	margin-top: 40px;
+	padding: 0px;
+	background-color: white;
+	width: 500px;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.window table, th, td{
+	border-collapse: collapse;
+	border: 0px solid black;
+	/*background-image: linear-gradient(#484848, #212121, #484848);*/
+	background-image: linear-gradient(#7e2e1f, #98503c, #7e2e1f);
+}
+
+.window td {
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+.window textarea {
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	float: left;
+	border-radius: 15px;
+}
+
+.window  textarea:hover {
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2) inset, 0 5px 20px 0 rgba(0, 0, 0, 0.8) inset;
+}
+
+.sendername {
+	box-shadow: 0px 10px 10px grey;
+}
+
+.sendername table {
+	width: 100%;
+	float: left;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+.box {
+	width: 98%;
+	padding: 5px;
+	margin: 0 auto;
+	background-color: pink;
+	height: 400px;
+	/*box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2) inset, 0 5px 10px 0 rgba(0, 0, 0, 0.8) inset;*/
+	overflow: auto;
+	
+}
+
+.bubble {
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 0px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.bubble::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.time-right {
+    float: right;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+    font-size: 12px;
+}
+
+.bubble.receiver img {
+	position: relative;
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+.bubble.sender img {
+	position: relative;
+	float: left;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.bubble.sender .left {
+	width: 50%;
+	padding: 10px;
+	background-color: #90caf9; 
+	border: 2px solid #5d99c6;
+	
+	border-radius: 0px 10px 10px 10px;
+}
+
+.bubble.receiver .right {
+	float: right;
+	width: 50%;
+	padding: 10px;
+	background-color: #84ffff; 
+	border: 2px solid #4bcbcc;
+	border-radius: 10px 0px 10px 10px;
+}
+
+.reply table {
+	box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.6);
+}
+
+#frndball {
+	display: none;
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	top: 5px;
+	left: 790px;
+	background-color: red;
+	color: white;
+	border: 2px solid white;
+	padding: 2px;
+	border-radius: 50% 50%;
+	font-size: 11px;
+	text-align: center;
+	font-weight: bolder;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+

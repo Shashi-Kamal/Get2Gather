@@ -1,0 +1,278 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #fff9c4;
+	font-family: "Lato", sans-serif;
+}
+
+/* design form the top navbar */ 
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 4;
+}
+
+.navone {
+	background-image: linear-gradient(#212121, #484848, #212121);
+	list-style: none;
+	text-align: center;
+	padding: 15px 0px;
+	position: relative;
+	/*top: 240px;*/
+	z-index: 1;
+}
+
+.navone li {
+	display: inline-block;
+	padding: 0 30px;
+} 
+
+.navone li a {
+	text-decoration: none;
+	color: white;
+}
+
+.navone li a:hover {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+/*highlighting the active page*/
+.active {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+/*The container of the page in grid layout two rows*/
+.container {
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 40px;
+	/*background-color: white;*/
+	padding: 5px;
+	display: grid;
+	grid-template-rows: 1fr, 1fr;
+	grid-gap: 1em;
+	grid-template-areas: "I"
+						 "F";
+}
+
+/*====================Design for input area===================*/
+.box.input_area {
+	grid-area: I;
+	/*background-color: white;*/
+	padding: 0px;
+}
+
+/*design for the profile pic icon*/
+.small_pic img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid black;
+	float: left;
+}
+
+input[type = submit] {
+	padding: 8px 10px;
+	font-weight: bold;
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	border-radius: 4px;
+	border-width: 0px;
+	cursor: pointer;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+input[type = submit]:hover {
+	font-weight: bolder;
+	color: white;
+}
+
+button {
+	padding: 8px 10px;
+	font-weight: bold;
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	border-radius: 4px;
+	border-width: 0px;
+	cursor: pointer;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+button:hover {
+	font-weight: bolder;
+	color: white;
+}
+
+/*=======================Design for feed area===================*/
+.box.feed_area {
+	grid-area: F;
+	background-color: transparent;
+	padding-bottom: 5px;
+}
+
+.feed_box {
+	padding: 5px;
+	/*background-image: linear-gradient(#212121,#484848, #212121);*/
+    background-image: linear-gradient(#7e2e1f, #98503c, #7e2e1f);
+	border-radius: 0 50px 0 50px;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.feed_box textarea {
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	float: left;
+	border-radius: 15px;
+}
+
+.feed_box textarea:hover {
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2) inset, 0 5px 20px 0 rgba(0, 0, 0, 0.8) inset;
+}
+
+.box.feed_area table, td {
+    border: 0px solid black;
+    border-collapse: collapse;
+    /*color: black;*/ 
+}
+.feed_box table, td {
+    padding:5px;
+    text-align: left;  
+    
+}
+/*To differentiate two posts*/
+.space {
+	height: 10px;
+	background-color: #fff9c4;
+	padding: 10px;
+}
+
+/*=================================Notify Ball=================================*/
+#msgball {
+	display: none;
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	top: 5px;
+	left: 930px;
+	background-color: red;
+	color: white;
+	border: 2px solid white;
+	padding: 2px;
+	border-radius: 50% 50%;
+	font-size: 11px;
+	text-align: center;
+	font-weight: bolder;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+#frndball {
+	display: none;
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	top: 5px;
+	left: 815px;
+	background-color: red;
+	color: white;
+	border: 2px solid white;
+	padding: 2px;
+	border-radius: 50% 50%;
+	font-size: 11px;
+	text-align: center;
+	font-weight: bolder;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+/*=======================================================================*/
+.tab {
+    overflow: hidden;
+    background-image: linear-gradient(#312c32, #daad86, #312c32);
+    box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.tab button {
+    background-color: inherit;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    width: 50%;
+}
+
+.tab button:hover {
+    color: black;
+}
+
+.tab button.active {
+    background-image: linear-gradient(#212121,#484848, #212121);
+    color: white;
+}
+
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 0px;
+    text-align: center;
+    /*background-image: linear-gradient(#212121,#484848, #212121);*/
+    background-image: linear-gradient(#7e2e1f, #98503c, #7e2e1f);
+	border-radius: 0 0 0 50px;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+/* Style the tab content */
+
+#Text table, td {
+	color: white;
+}
+
+#Text textarea {
+	width: 100%;
+	padding: 10px;
+	float: left;
+	border-radius: 15px;
+}
+
+#Text  textarea:hover {
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2) inset, 0 5px 20px 0 rgba(0, 0, 0, 0.8) inset;
+}
+
+#Photo table, td {
+	color: white;
+}
+
+
+/*Design for the textarea*/
+#Photo textarea {
+	width: 100%;
+	padding: 10px;
+	float: left;
+	border-radius: 15px;
+}
+
+#Photo textarea:hover {
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2) inset, 0 5px 20px 0 rgba(0, 0, 0, 0.8) inset;
+}
+
+h1 {
+	text-align: center;
+}
+
+.statusContent {
+	width: 98%;
+	background-color: grey;
+	border-radius: 10px;
+	padding: 5px;
+}

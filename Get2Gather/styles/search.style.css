@@ -1,0 +1,171 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #fff9c4;
+	font-family: "Lato", sans-serif;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 4;
+}
+
+.navone {
+	background-image: linear-gradient(#212121, #484848, #212121);
+	list-style: none;
+	text-align: center;
+	padding: 15px 0px;
+	position: relative;
+	/*top: 240px;*/
+	z-index: 1;
+}
+
+.navone li {
+	display: inline-block;
+	padding: 0 30px;
+} 
+
+.navone li a {
+	text-decoration: none;
+	color: white;
+}
+
+.navone li a:hover {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+/*highlighting the active page*/
+.active {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+.container {
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 40px;
+	/*background-color: white;*/
+	padding: 5px;
+	display: grid;
+	grid-template-rows: 1fr, 1fr;
+	grid-gap: 1em;
+	grid-template-areas: "S"
+						 "R";
+}
+
+/*==============Design for the Search area==================*/
+.box.search_area {
+	grid-area: S;
+	/*background-color: white;*/
+	padding: 0px;
+}
+
+.searchbox {
+	height: 70px;
+	margin: 0 auto;
+	padding: 50px 50px 50px 70px; 
+	/*background-image: linear-gradient(#212121,#484848, #212121);*/
+    background-image: linear-gradient(#7e2e1f, #98503c, #7e2e1f);
+	border-radius: 0 50px 0 50px;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+input[type = submit] {
+	padding: 12px 20px;
+	font-weight: bold;
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	border-radius: 4px;
+	border-width: 0px;
+	cursor: pointer;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+input[type = submit]:hover {
+	font-weight: bolder;
+	color: white;
+}
+
+input[type=text] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow:0px 0px 5px 1px rgb(0,0,0) inset;
+}
+
+
+/*==============Design for the Results area==================*/
+.box.result_area {
+	grid-area: R;
+	/*background-color: #424242;*/
+	/*background-color: pink;*/
+	padding-bottom: 5px;
+	height: 100px;
+
+}
+
+.small_pic img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+
+.resultbox {
+	padding: 5px;
+}
+
+.resultbox table, td {
+	border-collapse: collapse;
+	border: 0px solid black;
+	text-align: center;
+	padding: 5px;
+}
+
+.resultbox table {
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.resultbox table tr {
+	/*background-image: linear-gradient(#212121,#484848, #212121);*/
+    background-image: linear-gradient(#7e2e1f, #98503c, #7e2e1f);
+    /*background-color: #212121;*/
+}
+
+.resultbox table tr:nth-child(odd) {
+	/*background-image: linear-gradient(#212121,#484848, #212121);*/
+    /*background-image: linear-gradient(#98503c, #7e2e1f, #98503c);*/
+   	/*background-color: #484848;*/
+}
+
+button {
+	padding: 12px 20px;
+	font-weight: bold;
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	border-radius: 4px;
+	border-width: 0px;
+	cursor: pointer;
+}
+
+button:hover {
+	font-weight: bolder;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: white;;
+	cursor: pointer;
+}

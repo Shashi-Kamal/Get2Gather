@@ -1,0 +1,349 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #fff9c4;
+	font-family: "Lato", sans-serif;
+}
+
+.container {
+	width: 75%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr, 1fr;
+	/*grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+	/*grid-template-rows: 1fr, 1fr, 1fr, 1fr;*/
+	grid-gap: 1em;
+	grid-template-areas: "C"
+						 "E";
+}	
+
+.cover_pic {
+	grid-area: C;
+	height: 370px;
+	display: grid;
+	grid-template-rows: 1fr, 1fr;
+	grid-gap: 0px;
+	grid-template-areas: "cov_area"
+						 "nav_area";
+}
+
+.cov_area {
+	grid-area: cov_area;
+	background-color: #cfd8dc;
+	padding: 0px;
+	width: 100%;
+	height: 320px;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.nav_area {
+	grid-area: nav_area;
+	padding: 0px;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.box.edit {
+	grid-area: E;
+	/*background-image: linear-gradient(#212121,#484848, #212121);*/
+    background-image: linear-gradient(#7e2e1f, #98503c, #7e2e1f);
+	padding: 10px;	
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.nav3_area {
+	grid-area: nav3_area;
+	/*background-color: red;
+	padding: 0px;*/
+}
+
+.pro_pic {
+	width: 220px;
+	height: 220px;
+	float: left;
+	margin-top: -200px;
+	margin-left: 20px;
+	border-radius: 50%;
+	position: relative;
+	z-index: 2;
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.6), 0 30px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+.pro_pic img {
+	max-height: 100%;
+	max-width: 100%;
+	border: 10px solid #484848;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.usrname {
+	position: relative;
+	width: 150px;
+	height: 50px;
+	/*border: 1px solid black;*/
+	margin-top: -95px;
+	margin-left: 30px;
+	float: left;
+	z-index: 2;
+	color: white;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.navone {
+	background-color: purple;
+	list-style: none;
+	text-align: center;
+	padding: 15px 0px;
+	position: relative;
+	/*top: 240px;*/
+	z-index: 1;
+}
+
+.navone li {
+	display: inline-block;
+	padding: 0 30px;
+} 
+
+.navone li a {
+	text-decoration: none;
+	color: white;
+}
+
+.navone li a:hover {
+	color: blue;
+}
+
+.active {
+	color: blue;
+}
+
+#cover_pic_change_btn {
+	position: relative;
+	top: 50px;
+	left: 25px;
+	opacity: 0;
+}
+
+#cover_pic_change_btn:hover {
+	opacity: 1;
+}
+
+
+.edit_area {
+	position: relative;
+	width: 98%;
+	border: 2px solid #fff9c4;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+}
+
+.edit_area table, td {
+	margin: auto;
+	width: 50%;
+	border: 0px solid black;
+	color: white;
+	padding: 5px;
+	border-collapse: collapse;
+}
+
+.edit_area textarea {
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	float: left;
+	border-radius: 15px;
+}
+
+.edit_area textarea:hover {
+	box-shadow: 5px 5px 10px 10px grey inset;
+}
+
+
+/*=====================================================================================*/
+
+.navone {
+	background-image: linear-gradient(#212121, #484848, #212121);
+	list-style: none;
+	text-align: center;
+	padding: 15px 0px;
+	position: relative;
+	/*top: 240px;*/
+	z-index: 1;
+}
+
+.navone li {
+	display: inline-block;
+	padding: 0 30px;
+} 
+
+.navone li a {
+	text-decoration: none;
+	color: white;
+}
+
+.navone li a:hover {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+.active {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+.navtwo {
+	background-image: linear-gradient(#212121, #484848, #212121);
+	list-style: none;
+	text-align: center;
+	padding: 15px 0px;
+	position: relative;
+	/*top: 240px;*/
+	z-index: 1;
+	float: right;
+}
+
+.navtwo li {
+	display: inline-block;
+	padding: 0 25px;
+} 
+
+.navtwo li a {
+	text-decoration: none;
+	color: white;
+}
+
+.navtwo li a:hover {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+.navtwo.active {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+input[type = submit] {
+	padding: 8px 10px;
+	font-weight: bold;
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	border-radius: 4px;
+	border-width: 0px;
+	cursor: pointer;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+input[type = submit]:hover {
+	font-weight: bolder;
+	color: white;
+}
+
+.edit_area button {
+	padding: 8px 10px;
+	font-weight: bold;
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	border-radius: 4px;
+	border-width: 0px;
+	cursor: pointer;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+.edit_area button]:hover {
+	font-weight: bolder;
+	color: white;
+}
+
+div.gallery {
+	position: relative;
+    margin: 5px;
+    border: 0px solid #ccc;
+    float: left;
+    width: 300px;
+    box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.h1 {
+	text-align: center;
+	font-size: 50px;
+	color: white;
+}
+
+.box.edit.heading {
+	width: 100px;
+	border-color: yellow;
+}
+
+.friendList {
+	margin: auto;
+	width: 40%;
+	background-color: white;
+	padding: 0px;
+}
+
+.friendList table {
+	width: 100%;
+	border: 0px solid black;
+	color: white;
+	padding: 5px;
+	border-collapse: collapse;
+}
+
+.friendList td {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	border: 0px solid black;
+	color: black;
+	padding: 5px;
+	border-collapse: collapse;
+}
+
+.small_pic img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+
+.friendList a {
+	text-decoration: none;
+	color: black;
+}
+
+.mutual {
+	position: relative;
+	top: 0;
+	left: 50px;
+}
+
+.edit_area p {
+	font-size: 20px;
+	font-weight: bolder;
+	color: white;
+	
+}

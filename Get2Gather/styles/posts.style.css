@@ -1,0 +1,143 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #424242;
+	font-family: "Lato", sans-serif;
+}
+
+/* design form the top navbar */ 
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 4;
+}
+
+.navone {
+	background-image: linear-gradient(#212121, #484848, #212121);
+	list-style: none;
+	text-align: center;
+	padding: 15px 0px;
+	position: relative;
+	/*top: 240px;*/
+	z-index: 1;
+}
+
+.navone li {
+	display: inline-block;
+	padding: 0 30px;
+} 
+
+.navone li a {
+	text-decoration: none;
+	color: white;
+}
+
+.navone li a:hover {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+/*highlighting the active page*/
+.active {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+/*The container of the page in grid layout two rows*/
+.container {
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 40px;
+	/*background-color: white;*/
+	padding: 5px;
+	display: grid;
+	grid-template-rows: 1fr, 1fr;
+	grid-gap: 1em;
+	grid-template-areas: "I"
+						 "F";
+}
+
+/*====================Design for input area===================*/
+.box.input_area {
+	grid-area: I;
+	/*background-color: white;*/
+	padding: 0px;
+}
+
+.input_box {
+	padding: 5px;
+	background-image: linear-gradient(#212121,#484848, #212121);
+	border-radius: 0 50px 0 50px;
+}
+
+.input_box table, td {
+	color: white;
+}
+
+/*design for the profile pic icon*/
+.small_pic img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid black;
+	float: left;
+}
+
+/*Design for the textarea*/
+.input_box textarea {
+	width: 100%;
+	padding: 10px;
+	float: left;
+	border-radius: 15px;
+}
+
+.input_box textarea:hover {
+	box-shadow: 5px 5px 10px 10px grey inset;
+}
+
+input[type = submit] {
+	padding: 5px 15px;
+	font-weight: bold;
+	float: right;
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+/*=======================Design for feed area===================*/
+.box.feed_area {
+	grid-area: F;
+	background-color: #424242;
+	padding-bottom: 5px;
+}
+
+.feed_box {
+	padding: 5px;
+	background-image: linear-gradient(#212121,#484848, #212121);
+	border-radius: 0 50px 0 50px;
+}
+
+.box.feed_area table, td {
+    border: 0px solid black;
+    border-collapse: collapse;
+    /*color: black;*/ 
+}
+.feed_box table, td {
+    padding:5px;
+    text-align: left;  
+    
+}
+/*To differentiate two posts*/
+.space {
+	height: 10px;
+	background-color: transparent;
+	padding: 10px;
+}

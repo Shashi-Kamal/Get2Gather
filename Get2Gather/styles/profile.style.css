@@ -1,0 +1,789 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/*background-color: #e1bee7;*/
+	background-color: #fff9c4;
+	font-family: "Lato", sans-serif;
+}
+
+.container {
+	width: 75%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 1fr, 1fr, 1fr;
+	/*grid-template-rows: 1fr, 1fr, 1fr, 1fr;*/
+	grid-gap: 1em;
+	grid-template-areas: "C C C C C"
+						 "A A I I I"
+						 "A A P P P";
+}	
+
+.cover_pic {
+	grid-area: C;
+	height: 370px;
+	display: grid;
+	grid-template-rows: 1fr, 1fr;
+	grid-gap: 0px;
+	grid-template-areas: "cov_area"
+						 "nav_area";
+}
+
+.cov_area {
+	position: relative;
+	grid-area: cov_area;
+	background-color: #cfd8dc;
+	padding: 0px;
+	height: 320px;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.cov_area button {
+	position: relative;
+	top: -40px;
+	left: 850px;
+	font-size: 10px;
+	z-index: 3;
+	opacity: 0;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.cov_area button:hover {
+	opacity: 1;
+}
+
+}
+.nav_area {
+	grid-area: nav_area;
+	/*background-color: red;*/
+	padding: 0px;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.box.about {
+	grid-area: A;
+	background-color: transparent;
+	padding: 0px;
+	border-radius: 200px 200px 0 0;
+	margin-top: -260px;
+	z-index: 2;
+	opacity: 0.9;
+	/*box-shadow:0px 0px 5px 1px rgb(0,0,0);*/
+}
+
+.shape {
+	background-color: #7e2e1f;
+	padding: 0px;
+	border-radius: 200px 200px 0 0;
+	margin-top: 0px;
+	z-index: 2;
+	opacity: 0.9;
+	height: 473px;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.box.sidebar {
+	grid-area: S;
+	background-color: transparent;
+	padding: 0px;
+}
+
+.first {
+	position: relative;
+	margin-top: 57px;
+	width: 90%;
+	background-color: #7e2e1f;
+	padding: 20px;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.second {
+	position: relative;
+	margin-top: 0px;
+	width: 90%;
+	height: 380px;
+	background-color: #7e2e1f;
+	padding: 20px;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.third {
+	position: relative;
+	margin-top: 0px;
+	width: 90%;
+	height: 380px;
+	background-color: #7e2e1f;
+	padding: 20px;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+div.photos {
+	position: relative;
+    margin: 4px;
+    border: 0px solid #ccc;
+    float: left;
+    width: 110px;
+    height: 110px;
+    box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+div.desc {
+	position: relative;
+	top: -25px;
+	background-color: transparent;
+	font-size: 12px;
+	color: white;
+	text-align: center;
+	padding: 2px;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+div.photos a {
+	text-decoration: none;
+}
+
+
+/*====================Design for input area===================*/
+.box.input_area {
+	grid-area: I;
+	background-color: transparent;
+	padding: 0px;
+}
+
+.input_box_with_photo, #withPhoto {
+	display: block;
+	padding: 0px;
+	background-image: linear-gradient(#212121,#484848, #212121);
+	border-radius: 0 50px 0 50px;
+}
+
+.input_box_without_photo, #withoutPhoto {
+	display: block;
+	padding: 0px;
+	background-image: linear-gradient(#212121,#484848, #212121);
+	border-radius: 0 50px 0 50px;
+}
+
+.input_box_with_photo table, td {
+	color: white;
+}
+
+.input_box_without_photo table, td {
+	color: white;
+}
+
+/*Design for the textarea*/
+.input_box_with_photo textarea {
+	width: 100%;
+	padding: 10px;
+	float: left;
+	border-radius: 15px;
+}
+
+.input_box_without_photo textarea {
+	width: 100%;
+	padding: 10px;
+	float: left;
+	border-radius: 15px;
+}
+
+.input_box_with_photo textarea:hover {
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2) inset, 0 5px 20px 0 rgba(0, 0, 0, 0.8) inset;
+
+}
+
+.input_box_without_photo textarea:hover {
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2) inset, 0 5px 20px 0 rgba(0, 0, 0, 0.8) inset;
+}
+
+/*design for the profile pic icon*/
+.small_pic img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid black;
+	float: left;
+}
+
+button {
+	padding: 8px 10px;
+	font-weight: bold;
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	border-radius: 4px;
+	border-width: 0px;
+	cursor: pointer;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+button:hover {
+	font-weight: bolder;
+	color: white;
+}
+
+/*=======================Design for posts area===================*/
+.box.post_area {
+	grid-area: P;
+	/*background-color: #424242;*/
+	background-color: transparent;
+	padding-bottom: 5px;
+}
+
+.post_box {
+	padding: 5px;
+	/*background-image: linear-gradient(#212121,#484848, #212121);*/
+	background-image: linear-gradient(#7e2e1f, #98503c, #7e2e1f);
+	
+	border-radius: 0 50px 0 50px;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.box.post_area table, td {
+    border: 0px solid black;
+    border-collapse: collapse;
+    /*color: black;*/ 
+}
+.post_box table, td {
+    padding:5px;
+    border: 0px solid black;
+    text-align: justify;   
+}
+
+.post_box textarea {
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	float: left;
+	border-radius: 15px;
+}
+
+.post_box textarea:hover {
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2) inset, 0 5px 20px 0 rgba(0, 0, 0, 0.8) inset;
+}
+
+/*To differentiate two posts*/
+.space {
+	height: 10px;
+	background-color: #fff9c4;
+	/*background-color: #e1bee7;*/
+	padding: 5px;
+}
+
+.spacex {
+	height: 100%;
+	/*background-color: #e1bee7;*/
+	background-color: #fff9c4;
+	padding: 5px;
+}
+
+.usrname {
+	position: relative;
+	margin-top: 15px;
+	z-index: 5;
+	color: #ffab00;
+	text-align: center;
+	text-shadow: 2px 2px 4px #000000;
+	width: 95%;
+	background-color: transparent;
+	padding: 10px;
+	letter-spacing: 2px;
+}
+
+.navone {
+	background-image: linear-gradient(#212121, #484848, #212121);
+	list-style: none;
+	text-align: center;
+	padding: 15px 0px;
+	position: relative;
+	/*top: 240px;*/
+	z-index: 1;
+}
+
+.navone li {
+	display: inline-block;
+	padding: 0 30px;
+} 
+
+.navone li a {
+	text-decoration: none;
+	color: white;
+}
+
+.navone li a:hover {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+.active {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+.navtwo {
+	background-image: linear-gradient(#212121, #484848, #212121);
+	list-style: none;
+	text-align: center;
+	padding: 15px 0px;
+	position: relative;
+	/*top: 240px;*/
+	z-index: 1;
+	float: right;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.navtwo li {
+	display: inline-block;
+	padding: 0 25px;
+} 
+
+.navtwo li a {
+	text-decoration: none;
+	color: white;
+}
+
+.navtwo li a:hover {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+.navtwo.active {
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+#cover_pic_change_btn {
+	position: relative;
+	top: 50px;
+	left: 25px;
+	opacity: 0;
+}
+
+#cover_pic_change_btn:hover {
+	opacity: 1;
+}
+
+.small_pic img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid black;
+	float: left;
+}
+
+.box.inputs textarea {
+	width: 100%;
+	padding: 10px;
+	float: left;
+	border-radius: 15px;
+	
+}
+
+.box.inputs textarea:hover {
+	box-shadow: 5px 5px 10px 10px grey inset;
+}
+
+input[type = submit] {
+	padding: 8px 10px;
+	font-weight: bold;
+	background-image: linear-gradient(#312c32, #daad86, #312c32);
+	border-radius: 4px;
+	border-width: 0px;
+	cursor: pointer;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+input[type = submit]:hover {
+	font-weight: bolder;
+	color: white;
+}
+
+.circle {
+	width: 310px;
+	height: 310px;
+	background-color: #98503c;
+	border-radius: 50% 50%;
+	position: relative;
+	margin-top: -430px;
+	margin-left: 42px;
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.6), 0 8px 20px 0 rgba(0, 0, 0, 0.6);
+}
+
+.circle img {
+	position: relative;
+	top: 35px;
+	left: 35px;
+	max-height: 220px;
+	max-width: 220px;
+	border: 10px solid #484848;
+	border-radius: 50%;
+	cursor: pointer;
+  z-index: 3;
+	box-shadow: 0px 10px 10px 0 rgba(0, 0, 0, 0.6), 0px 0px 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+.circle button {
+	position: relative;
+	top: -100px;
+	left: 90px;
+	font-size: 10px;
+	z-index: 5;
+	opacity: 0;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+.circle button:hover {
+	opacity: 1;
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 4;
+}
+
+.name {
+	position: relative;
+	width: auto;
+	border:1px solid black;
+	margin-top: 10px;
+	
+	padding: 5px;
+	float: left;
+}
+
+.time_stamp {
+	position: relative;
+	width: 400px;
+	border:1px solid black;
+	margin-top: 0px;
+	padding: 5px;
+	float: left;
+}
+
+
+
+
+.box.input_area table {
+	border: 0px solid black;
+	border-collapse: collapse;
+}
+
+
+
+.box.inputs td {
+	color: white; 
+}
+
+h1 {
+	text-align: center;
+	font-size: 50px;
+}
+
+
+
+
+
+/*===================================== Message Modal Box ======================================*/
+
+/* The Modal (background) */
+.message {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.message-content {
+    margin: auto;
+    padding: 20px;
+    border: 0px solid #888;
+    width: 35%;
+    height: 160px;
+    background-image: linear-gradient(#212121,#484848, #212121);
+	border-radius: 0 50px 0 50px;
+	color: white;
+}
+
+.message-content textarea {
+	width: 100%;
+	height: 100px;
+	padding: 10px;
+	float: left;
+	border-radius: 15px;
+}
+
+.message-content textarea:hover {
+	box-shadow: 5px 5px 10px 10px grey inset;
+}
+
+.message-content input[type=submit] {
+	margin-top: 10px;
+	float: right;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    margin-top: -35px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.msg {
+	background-color: transparent;
+}
+
+#msgball {
+	display: none;
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	top: 5px;
+	left: 935px;
+	background-color: red;
+	color: white;
+	border: 2px solid white;
+	padding: 2px;
+	border-radius: 50% 50%;
+	font-size: 11px;
+	text-align: center;
+	font-weight: bolder;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+#frndball {
+	display: none;
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	top: 5px;
+	left: 815px;
+	background-color: red;
+	color: white;
+	border: 2px solid white;
+	padding: 2px;
+	border-radius: 50% 50%;
+	font-size: 11px;
+	text-align: center;
+	font-weight: bolder;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+
+
+.modalWindow {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modalWindow-content {
+    margin: auto;
+    padding: 20px;
+    border: 0px solid #888;
+    width: 35%;
+    height: 160px;
+    background-image: linear-gradient(#212121,#484848, #212121);
+	border-radius: 0 50px 0 50px;
+	color: white;
+}
+
+/* The Close Button */
+.closeUploadP {
+    color: #aaaaaa;
+    margin-top: -10px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeUploadP:hover,
+.closeUploadP:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modalWindow input[type=file] {
+	position: relative;
+	top: 50px;
+	left: 100px;
+}
+
+.modalWindow input[type=submit] {
+	position: relative;
+	top: 50px;
+	left: 50px;
+}
+
+.covWindow {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.covWindow-content {
+    margin: auto;
+    padding: 20px;
+    border: 0px solid #888;
+    width: 35%;
+    height: 160px;
+    background-image: linear-gradient(#212121,#484848, #212121);
+	border-radius: 0 50px 0 50px;
+	color: white;
+}
+.closeUploadC {
+    color: #aaaaaa;
+    margin-top: -10px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeUploadC:hover,
+.closeUploadC:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tab {
+    overflow: hidden;
+    
+    
+    background-image: linear-gradient(#312c32, #daad86, #312c32);
+    box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+.tab button {
+    background-color: inherit;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    width: 50%;
+}
+
+.tab button:hover {
+    color: black;
+}
+
+.tab button.active {
+    background-image: linear-gradient(#212121,#484848, #212121);
+    /*background-image: linear-gradient(#7e2e1f, #98503c, #7e2e1f);*/
+    color: white;
+}
+
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 0px;
+    text-align: center;
+    /*background-image: linear-gradient(#212121,#484848, #212121);*/
+    background-image: linear-gradient(#7e2e1f, #98503c, #7e2e1f);
+	border-radius: 0 0 0 50px;
+	box-shadow:0px 0px 5px 1px rgb(0,0,0);
+}
+
+#Text table, td {
+	color: white;
+}
+
+#Text textarea {
+	width: 100%;
+	padding: 10px;
+	float: left;
+	border-radius: 15px;
+}
+
+#Text  textarea:hover {
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2) inset, 0 5px 20px 0 rgba(0, 0, 0, 0.8) inset;
+}
+
+#Photo table, td {
+	color: white;
+}
+
+
+/*Design for the textarea*/
+#Photo textarea {
+	width: 100%;
+	padding: 10px;
+	float: left;
+	border-radius: 15px;
+}
+
+#Photo textarea:hover {
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2) inset, 0 5px 20px 0 rgba(0, 0, 0, 0.8) inset;
+}
+
+.intro {
+	width: 96%;
+	position: relative;
+	top: 0px;
+	background-color: #80d8ff;
+	border-radius: 10px;
+	padding: 5px;
+	height: 200px;
+	border:2px solid whitesmoke;
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2) inset, 0 5px 20px 0 rgba(0, 0, 0, 0.8) inset;
+}
+
+#introtable {
+	color: blue;
+}
+
+.intro table td {
+	color: #00227b;
+	float: left;
+}
+
